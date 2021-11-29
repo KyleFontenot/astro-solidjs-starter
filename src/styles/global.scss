@@ -153,6 +153,11 @@ table {
     1.125rem
   );
 }
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
 
 @media (prefers-color-scheme: dark) {
   body {
