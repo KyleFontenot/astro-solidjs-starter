@@ -1,0 +1,15 @@
+---
+import Head from "./Head.astro"
+const {description} = Astro.props | "This is a description"
+const {title} = Astro.props | "Solid Astro starter"
+---
+
+<html lang="en">
+<Head title={title} description={description}/>
+<body>
+  <Header/>
+    <main>
+      <slot/>
+    </main>
+</body>
+</html>
