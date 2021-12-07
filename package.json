@@ -12,7 +12,8 @@
   "devDependencies": {
     "@astrojs/renderer-solid": "^0.2.0",
     "astro": "^0.21.4",
-    "autoprefixer": "^10.4.0"
+    "autoprefixer": "^10.4.0",
+    "vite-plugin-vsharp": "^1.1.4"
   },
   "dependencies": {
     "astro-seo": "^0.4.2"
