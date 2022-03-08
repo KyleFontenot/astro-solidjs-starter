@@ -1,7 +1,18 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
-import Homepage from '../components/Homepage/Homepage.jsx'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import StyleOverview from '../components/StyleOverview.astro'
+import Image from "astro-imagetools"
 ---
-<MainLayout >
-  <Homepage />
+<MainLayout>
+<Header ></Header>
+  <main>
+  <StyleOverview />
+  <!-- Example Image component -->
+  <Image src="/src/images/trees.jpg" alt="Photograph of a windy road in autumn landscape" breakpoints={[320, 520, 880, 1240]} format="webp" fallbackFormat="jpeg" layout="fullWidth" />
+  
+  </main>
+  
+  <Footer></Footer>
 </MainLayout>

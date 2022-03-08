@@ -1,31 +1,42 @@
 ---
   import metadata from "./metadata.js"
+  import "../styles/reset.scss"
+  import "../styles/global.scss"
+  import { SEO } from "astro-seo"
+  // import { listen, prefetch } from "quicklink";
   const title = Astro.props.title || metadata.title || "something"
   const description = Astro.props.description || metadata.description || "descriptions of something"
 
   // in public directory
-  const image = Astro.props.description || metadata.image || "descriptions of something"
-
-  const canonical = Astro.props.canonical || metadata.canonical || "https://website.com"
-
+  const image = Astro.props.description || metadata.image || null
+  const canonical = Astro.props.canonical || metadata.canonical || undefined
+  const slug = Astro.props.slug || undefined
+  
 ---
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{Astro.props.slug ? `${title} - ${slug}` : title}</title>
-    <meta name="description" content={description}>
-    <meta name=”robots” content="index, follow">
+    <SEO title={slug ? `${title} | ${slug}` : title} description={description} />
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="canonical" href="https://www.website.com/page/" />
-
-    <!-- preload fonts here -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap" rel="stylesheet">
+    
+<!-- Font preloading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700&family=Open+Sans:wght@400;600;700&family=Sunflower:wght@300;500;700&display=swap" rel="stylesheet" />
   </head>
   <body>
   <!-- nav elements -->
     <slot />
   </body>
+  <!-- Important link prefetching library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" client:load></script>
+  <script client:load>
+      quicklink.listen();
+  </script>
+  <!-- Rellax library -->
+  <!-- <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script>
+      // Accepts any class name
+      var rellax = new Rellax('.rellax');
+    </script> -->
 </html>
