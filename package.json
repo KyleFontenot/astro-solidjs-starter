@@ -1,14 +1,14 @@
 {
 	"name": "@KyleFontenot/solidjs-astro-starter",
 	"license": "MIT",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"private": true,
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro build",
 		"serve": "astro preview",
-		"publish": "NODE_ENV=production yarn version && next build",
+		"publish": "NODE_ENV=production yarn version && astro build",
 		"postpublish": "git add --all && git commit && git push"
 	},
 	"devDependencies": {
