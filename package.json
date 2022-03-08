@@ -1,21 +1,26 @@
 {
-  "name": "@KyleFontenot/solidjs-astro-starter",
-  "license": "MIT",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
-  },
-  "devDependencies": {
-    "@astrojs/renderer-solid": "^0.2.0",
-    "astro": "^0.21.4",
-    "autoprefixer": "^10.4.0",
-    "vite-plugin-vsharp": "^1.1.4"
-  },
-  "dependencies": {
-    "astro-seo": "^0.4.2"
-  }
+	"name": "@KyleFontenot/solidjs-astro-starter",
+	"license": "MIT",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"serve": "astro preview",
+		"publish": "NODE_ENV=production yarn version && next build",
+		"postpublish": "git add --all && git commit && git push"
+	},
+	"devDependencies": {
+		"@astrojs/renderer-solid": "^0.4.0",
+		"astro": "^0.23.7",
+		"autoprefixer": "^10.4.2",
+		"typescript": "^4.6.2"
+	},
+	"dependencies": {
+		"astro-imagetools": "^0.1.6",
+		"astro-seo": "^0.4.2",
+		"sass": "^1.49.9",
+		"vite-plugin-vsharp": "^1.1.4"
+	}
 }
