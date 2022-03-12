@@ -20,6 +20,8 @@ Then, adjust `/src/layouts/metadata.js` for global settings such as meta tag dat
 | `yarn run serve`  | Host a build on default `localhost:3000`     |
 | `yarn run publish`| Updates packages.json version, adds and commits all changes, and pushes to current branch.|
 
+To prevent redundant version patches, a good habit is to `build` before running `publish`
+
 ## Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
