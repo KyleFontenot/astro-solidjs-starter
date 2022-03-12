@@ -18,7 +18,7 @@ Then, adjust `/src/layouts/metadata.js` for global settings such as meta tag dat
 | `yarn run dev`    | Starts local dev server at `localhost:3000`  |
 | `yarn run build`  | Build your production site to `./dist/`      |
 | `yarn run serve`  | Host a build on default `localhost:3000`     |
-| `yarn run publish`|    |
+| `yarn run publish`| Updates packages.json version, adds and commits all changes, and pushes to current branch.|
 
 ## Project Structure
 
