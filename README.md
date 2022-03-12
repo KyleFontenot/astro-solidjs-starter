@@ -8,10 +8,9 @@ cd project-name
 degit KyleFontenot/solidjs-astro-starter
 yarn
 ```
+Then, adjust `/src/layouts/metadata.js` for global settings such as meta tag data, fonts, and colors that are injected via CSS variables. After, checkout the BaseLayout for your particular font source strategy.
 
 ## Commands
-
-All commands are run from the root of the project, from a terminal:
 
 | Command           | Action                                       |
 |:----------------  |:-------------------------------------------- |
@@ -33,6 +32,7 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── favicon.ico
 ├── src/
 │   ├── layouts/
+│   │   ├── metadata.js
 │   │   └── BaseLayout.astro
 │   ├── components/
 │   │   └── Tour.astro
@@ -49,7 +49,7 @@ import Image from 'astro-imagetools'
 <Image src="/src/images/example.jpg" alt="Description text" />
 <Image src="/src/images/example.jpg" alt="Description text" breakpoints={[320, 560, 800, 1240]} />
 ```
-Keep in mind that the `src` prop is an absolute path.
+Keep in mind that the `src` prop is an absolute path from the project root.
 
 ## Links 
  - [Astro](https://docs.astro.build/en/getting-started/)
