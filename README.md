@@ -58,5 +58,6 @@ Keep in mind that the `src` prop is an absolute path from the project root.
  - [SolidJS](https://www.solidjs.com/)
  - [astro-imagetools](https://github.com/RafidMuhymin/astro-imagetools)
 
-
+### Handy Auxilary Tools
+ - [ScrollReveal](https://scrollrevealjs.org/guide/hello-world.html)
 
