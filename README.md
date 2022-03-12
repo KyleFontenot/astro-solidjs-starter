@@ -1,19 +1,39 @@
-# Welcome to [Astro](https://astro.build)
+# Kyle's Astro/SolidJS starter 
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/starter)
+## Get Started 
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+```
+mkdir project-name
+cd project-name
+degit KyleFontenot/solidjs-astro-starter
+yarn
+```
 
-## 🚀 Project Structure
+## Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command           | Action                                       |
+|:----------------  |:-------------------------------------------- |
+| `yarn`            | Installs dependencies                        |
+| `yarn run dev`    | Starts local dev server at `localhost:3000`  |
+| `yarn run build`  | Build your production site to `./dist/`      |
+| `yarn run serve`  | Host a build on default `localhost:3000`     |
+| `yarn run publish`|    |
+
+## Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
 ```
 /
 ├── public/
+│   ├── images/
 │   ├── robots.txt
 │   └── favicon.ico
 ├── src/
+│   ├── layouts/
+│   │   └── BaseLayout.astro
 │   ├── components/
 │   │   └── Tour.astro
 │   └── pages/
@@ -21,24 +41,20 @@ Inside of your Astro project, you'll see the following folders and files:
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Using Image component 
+```
+---
+import Image from 'astro-imagetools'
+---
+<Image src="/src/images/example.jpg" alt="Description text" />
+<Image src="/src/images/example.jpg" alt="Description text" breakpoints={[320, 560, 800, 1240]} />
+```
+Keep in mind that the `src` prop is an absolute path.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Links 
+ - [Astro](https://docs.astro.build/en/getting-started/)
+ - [SolidJS](https://www.solidjs.com/)
+ - [astro-imagetools](https://github.com/RafidMuhymin/astro-imagetools)
 
-Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
-
-| Command           | Action                                       |
-|:----------------  |:-------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:3000`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://github.com/withastro/astro) or jump into our [Discord server](https://astro.build/chat).
-# solidjs-astro-starter
