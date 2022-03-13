@@ -1,6 +1,6 @@
 # Kyle's Astro/SolidJS starter 
 
-## Get Started 
+## To Use
 
 ```
 mkdir project-name
