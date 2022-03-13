@@ -11,8 +11,22 @@
   const image = Astro.props.description || metadata.image || null
   const canonical = Astro.props.canonical || metadata.canonical || undefined
   const slug = Astro.props.slug || undefined
-  
+  const { colors, fonts } = metadata
 ---
+<style global define-vars={{colors, fonts}}>
+  :root {
+    --color-primary-1: colors.primary1;
+    --color-primary-2: colors.primary2;
+    --color-primary-3: colors.primary3;
+    --color-secondary-1: colors.secondary1;
+    --color-secondary-2: colors.secondary2;
+    --white: colors.white;
+    --dark: colors.black;
+    --font-primary: fonts.primary;
+    --font-secondary: fonts.secondary;
+    --font-tertiary: fonts.tertiary;
+  }
+</style>
 <html lang="en">
   <head>
     <SEO title={slug ? `${title} | ${slug}` : title} description={description} />
@@ -25,18 +39,13 @@
     <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700&family=Open+Sans:wght@400;600;700&family=Sunflower:wght@300;500;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-  <!-- nav elements -->
+  <!-- insert nav elements -->
     <slot />
   </body>
-  <!-- Important link prefetching library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" client:load></script>
+  <!-- Link prefetching library -->
   <script client:load>
-      quicklink.listen();
+    import {prefetch, listen} from 'quicklink'
+    prefetch(["/.html"]);
+    listen();
   </script>
-  <!-- Rellax library -->
-  <!-- <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-    <script>
-      // Accepts any class name
-      var rellax = new Rellax('.rellax');
-    </script> -->
 </html>

@@ -19,5 +19,19 @@ const metadata = {
 		site: "<twitter:site>" || null,
 		creator: "<twitter:creator>" || null,
 	},
+	colors: {
+		primary1: "#5BA6AE",
+		primary2: "#146E7D",
+		primary3: "#34575D",
+		secondary1: "#F6BFAF",
+		secondary2: "#E28B71",
+		white: "#FCF7F2",
+		black: "#34575D",
+	},
+	fonts: {
+		primary: "Sunflower",
+		secondary: "Sunflower",
+		tertiary: "Sunflower",
+	},
 };
 export default metadata;

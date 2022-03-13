@@ -13,13 +13,14 @@
 	},
 	"devDependencies": {
 		"@astrojs/renderer-solid": "^0.4.0",
-		"astro": "^0.23.7",
+		"astro": "^0.24.0",
 		"autoprefixer": "^10.4.2",
 		"typescript": "^4.6.2"
 	},
 	"dependencies": {
-		"astro-imagetools": "^0.1.6",
+		"astro-imagetools": "^0.2.4",
 		"astro-seo": "^0.4.2",
+		"quicklink": "^2.2.0",
 		"sass": "^1.49.9",
 		"vite-plugin-vsharp": "^1.1.4"
 	}
