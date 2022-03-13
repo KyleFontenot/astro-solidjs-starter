@@ -37,11 +37,13 @@ Inside of your Astro project, you'll see the following folders and files:
 │   │   ├── metadata.js
 │   │   └── BaseLayout.astro
 │   ├── components/
+│   │   ├── StyleOverview.astro
 │   │   └── Tour.astro
 │   └── pages/
 │       └── index.astro
 └── package.json
 ```
+The StyleOverview component is the default in `index.astro` becuase it displays all of the global settings on color, font, and Image. Could be a good starting point in creating the entire UI.
 
 ## Using Image component 
 ```
@@ -60,4 +62,5 @@ Keep in mind that the `src` prop is an absolute path from the project root.
 
 ### Handy Auxilary Tools
  - [ScrollReveal](https://scrollrevealjs.org/guide/hello-world.html)
+  Add in 
 
