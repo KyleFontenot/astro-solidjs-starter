@@ -19,6 +19,7 @@ Then, adjust `/src/layouts/metadata.js` for global settings such as meta tag dat
 | `yarn run build`  | Build your production site to `./dist/`      |
 | `yarn run serve`  | Host a build on default `localhost:3000`     |
 | `yarn run publish`| Updates packages.json version, adds and commits all changes, and pushes to current branch.|
+| `yarn run format`| Uses the [prettier-plugin-astro](https://github.com/withastro/prettier-plugin-astro) for prettifying .astro files (beta)|
 
 To prevent redundant version patches, a good habit is to `build` before running `publish`
 
