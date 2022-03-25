@@ -3,7 +3,9 @@
   import "../styles/reset.scss"
   import "../styles/global.scss"
   import { SEO } from "astro-seo"
-  // import { listen, prefetch } from "quicklink";
+  import Quicklink from "../scripts/Quicklink.astro"
+  // import Flickity from "../scripts/Flickity.astro"
+  // import Rellax from "../scripts/Rellax.astro"
   const title = Astro.props.title || metadata.title || "something"
   const description = Astro.props.description || metadata.description || "descriptions of something"
 
@@ -31,9 +33,6 @@
     <slot />
   </body>
   <!-- Link prefetching library -->
-  <script client:load>
-    import {prefetch, listen} from 'quicklink'
-    prefetch(["/.html"]);
-    listen();
-  </script>
+  <Quicklink />
+  
 </html>
