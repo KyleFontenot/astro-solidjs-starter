@@ -1,18 +1,24 @@
-const metaDescription =
-	"Kyle Fontenot's starter boilerplate for a SolidJS and Astro website.";
+
 const title = "KyleF's Solid Astro Starter";
+const description =
+	"Kyle Fontenot's starter boilerplate for a SolidJS and Astro website.";
+const canonical = "https://website.com" | undefined;
 
 const metadata = {
 	title: title,
-	description: metaDescription,
+	description: description,
 	canonical: "https://website.com",
 	openGraph: {
 		basic: {
 			title: title,
-			type: "title",
+			type: "website",
 			image: "./<pathtosocialimage>" || null,
 			url: "<url>" || null,
 		},
+		optional: {
+			description: description,
+			locale: "en_US", 
+		}
 	},
 	twitter: {
 		card: "<twitter:card>" || null,
