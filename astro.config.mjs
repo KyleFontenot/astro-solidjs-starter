@@ -1,4 +1,5 @@
 import astroImagePlugin from "astro-imagetools/plugin";
+import viteCompression from "vite-plugin-compression";
 
 export default {
 	projectRoot: ".", // Where to resolve all URLs relative to. Useful if you have a monorepo project.
@@ -15,7 +16,7 @@ export default {
 	},
 	renderers: ["@astrojs/renderer-solid"],
 	vite: {
-		plugins: [astroImagePlugin],
+		plugins: [astroImagePlugin, viteCompression],
 		optimizeDeps: {
 			exclude: ["@astropub/codecs", "imagetools-core", "sharp"],
 		},
