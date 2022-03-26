@@ -1,5 +1,7 @@
 # Kyle's Astro/SolidJS starter 
 
+A performant opinionated starter for Astro. Uses 
+
 ## To Use
 
 ```
@@ -8,7 +10,7 @@ cd project-name
 degit KyleFontenot/solidjs-astro-starter
 yarn
 ```
-Then, adjust `/src/layouts/metadata.js` for global settings such as meta tag data, fonts, and colors that are injected via CSS variables. After, checkout the BaseLayout for your particular font source strategy.
+Then, adjust `/src/layouts/metadata.js` for global settings such as meta tag data, fonts, and colors that are injected via CSS variables. After, checkout the MainLayout for your particular font source strategy.
 
 ## Commands
 
@@ -40,6 +42,10 @@ Inside of your Astro project, you'll see the following folders and files:
 │   ├── components/
 │   │   ├── StyleOverview.astro
 │   │   └── Tour.astro
+│   ├── scripts/
+│   │   ├── Flickity.astro
+│   │   ├── Rellax.astro
+│   │   └── ScrollReveal.astro
 │   └── pages/
 │       └── index.astro
 └── package.json
@@ -54,7 +60,10 @@ import Image from 'astro-imagetools'
 <Image src="/src/images/example.jpg" alt="Description text" />
 <Image src="/src/images/example.jpg" alt="Description text" breakpoints={[320, 560, 800, 1240]} />
 ```
-Keep in mind that the `src` prop is an absolute path from the project root.
+Keep in mind that the `src` prop is an absolute path from the project root when using `<Image />`. SVGs can be used in either `/public/` with either `<Image />` or with `<img />`, but image files must be from `/src/` (like `/src/images/`)
+
+## Using built-in SEO component
+[Astro-SEO](https://github.com/jonasmerlin/astro-seo), like Astro, is still in beta though working to be like a React Helmet replacement for Astro projects. By default, your `/src/layouts/metadata.js` file will trickle down into your `MainLayout.astro` file, which injects the SEO component. So, each page component you create using `MainLayout.astro` can be given a `slug` prop for dynamic title metatags.
 
 ## Links 
  - [Astro](https://docs.astro.build/en/getting-started/)
@@ -62,6 +71,13 @@ Keep in mind that the `src` prop is an absolute path from the project root.
  - [astro-imagetools](https://github.com/RafidMuhymin/astro-imagetools)
 
 ### Handy Auxilary Tools
+In `/src/scripts` are some useful drop-in library tools that use deferred CDN imports. These should be inserted in the your layout components. All of these are fully mobile friendly. Instructions and full config files will be coming next in the todo list. 
+ 
+ - [Flickity](https://flickity.metafizzy.co/)
+   - An image carousel library. Can be used for simple div scroll snapping as well. 
+ - [Rellax](https://dixonandmoe.com/rellax/)
+   - Parallax scrolling elements. Slows or quickens elements on scroll.
  - [ScrollReveal](https://scrollrevealjs.org/guide/hello-world.html)
-  Add in 
-
+   -  Reveal elements on scroll using Intersection Observer
+ - [Quicklink](https://getquick.link/)
+   -  Eagerly and lazily prefetches links in the page once idle. 
