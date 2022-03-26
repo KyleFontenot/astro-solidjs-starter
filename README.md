@@ -1,6 +1,6 @@
 # Kyle's Astro/SolidJS starter 
 
-A performant opinionated starter for Astro. Uses 
+A performant opinionated starter for Astro. Uses the SolidJS renderer for optional super lightweight JSX and client-side components, `.astro` components for everything else, and all the goodies that come with [Astro](https://docs.astro.build/en/getting-started/), such as scoped stylings, CSS module support, and [Vite](https://vitejs.dev/). Prioritizes in centralized global settings that trickle down into global variables for SEO and CSS variables such as colors and fonts.
 
 ## To Use
 
@@ -23,7 +23,7 @@ Then, adjust `/src/layouts/metadata.js` for global settings such as meta tag dat
 | `yarn run publish`| Updates packages.json version, adds and commits all changes, and pushes to current branch.|
 | `yarn run format`| Uses the [prettier-plugin-astro](https://github.com/withastro/prettier-plugin-astro) for prettifying .astro files (beta)|
 
-To prevent redundant version patches, a good habit is to `build` before running `publish`
+To prevent redundant version patches, a good habit is to `build` before running `publish` just to ensure build success before progressing a version.
 
 ## Project Structure
 
