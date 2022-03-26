@@ -57,8 +57,8 @@ The StyleOverview component is the default in `index.astro` becuase it displays 
 ---
 import Image from 'astro-imagetools'
 ---
-<Image src="/src/images/example.jpg" alt="Description text" />
-<Image src="/src/images/example.jpg" alt="Description text" breakpoints={[320, 560, 800, 1240]} />
+<Image src="/src/images/example.jpg" alt="Description text" layout="fill" />
+<Image src="/src/images/example.jpg" alt="Description text" layout="fullWidth" breakpoints={[320, 560, 800, 1240]} />
 ```
 Keep in mind that the `src` prop is an absolute path from the project root when using `<Image />`. SVGs can be used in either `/public/` with either `<Image />` or with `<img />`, but image files must be from `/src/` (like `/src/images/`)
 
