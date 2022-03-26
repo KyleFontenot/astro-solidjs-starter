@@ -1,6 +1,22 @@
-<script src="https://unpkg.com/quicklink@2.2.0/dist/quicklink.umd.js"></script>
-  <script client:load>
-    import {prefetch, listen} from 'quicklink'
+<script src="https://unpkg.com/quicklink@2.2.0/dist/quicklink.umd.js" defer></script>
+  <script defer>
     // prefetch(["/.html"]);
-    listen();
+    quicklink.listen();
+
+    /* ---- Full default configurations ---- */
+    // quicklink.listen({
+    //   el: document.body,
+    //   delay: 0,
+    //   limit: Infinity,
+    //   throttle: Infinity,
+    //   timeout: Infinity,
+    //   timeoutFn: requestIdleCallback,
+    //   priority: false,
+    //   origins: [location.hostname],
+    //   //! .origins: An empty array ([]) allows all origins to be prefetched.
+    //   ignores: [],
+    //   onError: () => {},
+    // })
+
+    // quicklink.prefetch([...urls], false : boolean)
   </script>
