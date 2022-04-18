@@ -1,14 +1,14 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
+import DocumentLayout from '../layouts/DocumentLayout.astro'
 import StyleOverview from '../components/StyleOverview.astro'
 import Image from "astro-imagetools"
 ---
-<BaseLayout>
+<DocumentLayout>
   <main>
   <StyleOverview></StyleOverview>
   <!-- example image component -->
-  <image src="/src/images/trees.jpg" alt="photograph of a windy road in autumn landscape" breakpoints={[320, 520, 880, 1240]} format="webp" fallbackformat="jpeg" layout="fullwidth" />
+  <Image src="/src/images/trees.jpg" alt="photograph of a windy road in autumn landscape" breakpoints={[320, 520, 880, 1240]} format="webp" fallbackformat="jpeg" layout="fullwidth" />
   
   </main>
   
-</BaseLayout>
+</DocumentLayout>

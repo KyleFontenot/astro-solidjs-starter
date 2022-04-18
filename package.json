@@ -1,8 +1,8 @@
 {
 	"name": "@KyleFontenot/astro-solidjs-starter",
 	"license": "MIT",
-	"version": "0.1.1",
-	"private": true,
+	"version": "0.3.1",
+	"private": false,
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
@@ -24,6 +24,7 @@
 		"@astrojs/solid-js": "^0.1.1",
 		"astro-imagetools": "^0.5.3",
 		"astro-seo": "^0.5.0",
+		"postcss-preset-env": "^7.4.3",
 		"quicklink": "^2.2.0",
 		"sass": "^1.50.0",
 		"vite-plugin-vsharp": "^1.1.4"
