@@ -45,12 +45,13 @@ Inside of your Astro project, you'll see the following folders and files:
 │   ├── scripts/
 │   │   ├── Flickity.astro
 │   │   ├── Rellax.astro
+│   │   ├── Quicklink.astro
 │   │   └── ScrollReveal.astro
 │   └── pages/
 │       └── index.astro
 └── package.json
 ```
-The StyleOverview component is the default in `index.astro` becuase it displays all of the global settings on color, font, and Image. Could be a good starting point in creating the entire UI. Meant to be deleted.
+The StyleOverview component is the default in `index.astro` becuase it displays all of the global settings on color, font, and Image. Could be a good starting point in adjusting global typography and is meant to be deleted.
 
 ## Using Image component 
 ```
@@ -62,13 +63,18 @@ import Image from 'astro-imagetools'
 ```
 Keep in mind that the `src` prop is an absolute path from the project root when using `<Image />`. SVGs can be used in either `/public/` with either `<Image />` or with `<img />`, but image files must be from `/src/` (like `/src/images/`)
 
-## Using built-in SEO component
-[Astro-SEO](https://github.com/jonasmerlin/astro-seo), like Astro, is still in beta though working to be like a React Helmet replacement for Astro projects. By default, your `/src/layouts/metadata.js` file will trickle down into your `MainLayout.astro` file, which injects the SEO component. So, each page component you create using `MainLayout.astro` can be given a `slug` prop for dynamic title metatags.
+This starter uses a `astro-imagetools.config.js` for global config of Image componenets with `webp` as a default format, and `[320, 640, 1020, 1580, 2070]` for the breakpoints. The breakpoints are shifted from the default array to prioritize quickest image availability. Change as you see necessary.
+[astro-imagetools API docs](https://astro-imagetools-docs.vercel.app/en/components-and-apis)
+
+## DocumentLayout.astro
+In `/src/layouts` there is a `DocumentLayout.astro`. This is the top-level layout component consisting of your `html`, `head`, and `body` tags. Try not to refactor these three tags out of this component, and think of it like NextJS's `_document.js` file. 
+[Astro-SEO](https://github.com/jonasmerlin/astro-seo), like Astro, is still in beta though working to be like a React Helmet replacement for Astro projects. By default, your `/src/layouts/metadata.js` file will trickle down into your `DocumentLayout.astro` file, which injects the SEO component. So, each page component you create using `DocumentLayout.astro` can be given a `slug` prop for dynamic title metatags.
 
 ## Links 
  - [Astro](https://docs.astro.build/en/getting-started/)
  - [SolidJS](https://www.solidjs.com/)
  - [astro-imagetools](https://github.com/RafidMuhymin/astro-imagetools)
+   - [astro-imagetools API docs](https://astro-imagetools-docs.vercel.app/en/components-and-apis)
 
 ### Handy Auxilary Tools
 In `/src/scripts` are some useful drop-in library tools that use deferred CDN imports. These should be inserted in the your layout components. All of these are fully mobile friendly. Instructions and full config files will be coming next in the todo list. 
